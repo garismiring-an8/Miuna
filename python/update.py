@@ -20,7 +20,7 @@ arg_parser.add_argument("-o",
                         help="Keluaran")
 args = arg_parser.parse_args()
 regex = re.compile=(r""+args.input+"")
-with open("E:/an8/latihan1.txt", "r+") as index:
+with open("E:/an8/garismiring-an8.github.io/index.html", "r+") as index:
     data = index.read()
     index.seek(0)
     index.write(re.sub(regex,args.output,data))
