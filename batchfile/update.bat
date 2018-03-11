@@ -1,1 +1,1 @@
-read.py -i %1 -o %2
+update.py -i %1 -o %2
