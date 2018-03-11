@@ -1,2 +1,2 @@
 # Miuna
-automation for git commit, push function a.k.a post tools
+CRUD for \an8 static website with regex
