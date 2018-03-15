@@ -10,13 +10,13 @@ arg_parser.add_argument("-k",
                         default=None,
                         required=True,
                         help="Kode Google Drive")
-arg_parser.add_argument("-n",
-                        "--nomor",
-                        dest="nomor",
-                        action="store",
-                        default=None,
-                        required=True,
-                        help="Nomor Rilis")
+#arg_parser.add_argument("-n",
+#                        "--nomor",
+#                        dest="nomor",
+#                        action="store",
+#                        default=None,
+#                        required=True,
+#                        help="Nomor Rilis")
 arg_parser.add_argument("-r",
                         "--rilisan",
                         dest="rilisan",
@@ -33,9 +33,16 @@ arg_parser.add_argument("-u",
                         help="Ukuran Rilisan")
 args = arg_parser.parse_args()
 
+nomor = re.compile=(r"<td>(\d)</td>\s*.*\s*</td>\s*.*\s*</tr>\s*<!--Posting-->")
+with open("E:/an8/garismiring-an8.github.io/index.html", "r+") as nomorz:
+    dataz = nomorz.read()
+    nomorz.seek(0)
+    fuck=re.search(nomor,dataz)
+    pl0x=int(fuck.group(1))+1
+
 html_str = """
  <tr kode="..""" + args.kode +"""" class="">
-            <td>"""+ args.nomor +"""</td>
+            <td>""" +str(pl0x)+"""</td>
             <td class="name">""" + args.rilisan +"""
 </td>
             <td class="size">"""+ args.ukuran +"""</td>
