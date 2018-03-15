@@ -1,1 +1,1 @@
-create.py -k %1 -n %2 -r %3 -u %4
+create.py -k %1 -r %2 -u %3
