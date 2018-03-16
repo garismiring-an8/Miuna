@@ -13,7 +13,7 @@ arg_parser.add_argument("-i",
                         required=True,
                         help="nomor rilisan yang ingin dihapus")
 args = arg_parser.parse_args()
-regex4fun=(r"(<tr kode=\".*\" class=\".*\">\s*<td>"+args.input+"<.*>\s*<td class=\".*\">.*\s*<.*>\s*<td class=\"size\">\d+<.*>\s*<.*>)")
+regex4fun=(r"(<tr kode=\".*\" class=\".*\">\s*<td>"+args.input+"<.*>\s*<td class=\".*\">.*\s*<.*>\s*<td class=\"size\">.*<.*>\s*<.*>)")
 with open("E:/an8/garismiring-an8.github.io/index.html", "r+") as f:
     data = f.read()
     f.seek(0)
